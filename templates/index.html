@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KalaKarigar - AI Marketing Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>KalaKarigar 🎨</h1>
+            <p>Your AI partner for telling the story of your craft.</p>
+        </header>
+
+        <main>
+            <div id="form-section">
+                <h2>1. Upload Your Art</h2>
+                <form id="creation-form">
+                    <div class="form-group">
+                        <label for="photo-upload">Upload a simple product photo:</label>
+                        <input type="file" id="photo-upload" name="photo" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="keywords">Describe your craft in a few words:</label>
+                        <input type="text" id="keywords" name="keywords" placeholder="e.g., handmade, natural dye, Jaipur tradition" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tone">Select a tone for your story:</label>
+                        <select id="tone" name="tone" required>
+                            <option value="Elegant">Elegant</option>
+                            <option value="Earthy">Earthy</option>
+                            <option value="Vibrant">Vibrant</option>
+                            <option value="Minimalist">Minimalist</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="generate-btn">✨ Generate My Marketing Kit!</button>
+                </form>
+            </div>
+
+            <div id="loading-section" class="hidden">
+                <div class="loader"></div>
+                <p>Your AI partner is crafting... Please wait a moment.</p>
+            </div>
+
+            <div id="results-section" class="hidden">
+                <h2>2. Your AI-Powered Marketing Kit</h2>
+                
+                <div class="result-card">
+                    <h3>Magic Photoshoot</h3>
+                    <img id="magic-photo" src="" alt="AI Generated Product Photoshoot">
+                </div>
+
+                <div class="result-card">
+                    <h3>Product Story</h3>
+                    <p id="story-output"></p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Instagram Post</h3>
+                    <p id="social-output"></p>
+                </div>
+
+                 <button id="reset-btn">Create Another Kit</button>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
